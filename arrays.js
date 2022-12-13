@@ -110,7 +110,7 @@ console.log(prodottiFiltrati2)
 
 console.log("REDUCE -----------------------------------")
 
-const somma = arrayDiNumeri.reduce((accumulatore, elemento, index, array) => {
+/* const somma = arrayDiNumeri.reduce((accumulatore, elemento, index, array) => {
   console.log("Valore accumulatore: ", accumulatore)
   console.log("Valore elemento: ", elemento)
   return accumulatore + elemento
@@ -131,3 +131,16 @@ const prodotto = arrayDiNumeri.reduce((accumulatore, elemento, index, array) => 
 }, 1)
 
 console.log(prodotto)
+ */
+
+console.log("FIND -----------------------------------")
+
+const prodotto = prodotti.find(elemento => elemento.prezzo === 5)
+
+console.log(prodotto) // Mi torna un oggetto perché l'array di partenza è un array di oggetti
+
+console.log("FINDINDEX -----------------------------------")
+
+const indice = prodotti.findIndex(elemento => elemento.prezzo === 5)
+
+console.log(indice) // Mi torna un numero perché sebbene l'array di partenza sia un array di oggetti, findIndex torna l'indice
