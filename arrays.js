@@ -68,7 +68,12 @@ const prodotti = [
   { nome: "Laptop ASUS", prezzo: 5 },
 ]
 
-const prezzi = prodotti.map(prodotto => {
+/* const prezzi = prodotti.map(prodotto => {
+  console.log(prodotto)
+  return prodotto.prezzo * 0.99
+})
+
+const prezzi = prodotti.map((prodotto, index, array) => {
   console.log(prodotto)
   return prodotto.prezzo * 0.99
 })
@@ -85,3 +90,44 @@ const cubiConFunzioneTradizionale = arrayDiNumeri.map(function (elemento) {
 })
 
 console.log(cubiConArrow)
+ */
+
+console.log("FILTER -----------------------------------")
+
+/* const prodottiFiltrati = prodotti.filter(elemento => {
+  return elemento.prezzo > 300 // IMPORTANTE: il return del filter deve tornare un valore BOOLEANO
+})
+
+const prodottiFiltrati = prodotti.filter((elemento, index, array) => {
+  return elemento.prezzo > 300
+})
+
+const prodottiFiltrati2 = prodotti.filter(elemento => elemento.prezzo > 300)
+
+console.log(prodottiFiltrati)
+console.log(prodottiFiltrati2)
+ */
+
+console.log("REDUCE -----------------------------------")
+
+const somma = arrayDiNumeri.reduce((accumulatore, elemento, index, array) => {
+  console.log("Valore accumulatore: ", accumulatore)
+  console.log("Valore elemento: ", elemento)
+  return accumulatore + elemento
+}, 0) // 0 è il valore iniziale dell'accumulatore
+
+// I Iterazione accumulatore = 0, elemento = 1 --> nuovo accumulatore = 0 + 1
+// II Iterazione accumulatore = 1, elemento = 2 --> nuovo accumulatore = 1 + 2
+// III Iterazione accumulatore = 3, elemento = 3 --> nuovo accumulatore = 3 + 3
+// ...
+// X Iterazione accumulatore = 45, elemento = 10 --> accumulatore finale = 55
+
+console.log(somma)
+
+const prodotto = arrayDiNumeri.reduce((accumulatore, elemento, index, array) => {
+  console.log("Valore accumulatore: ", accumulatore)
+  console.log("Valore elemento: ", elemento)
+  return accumulatore * elemento
+}, 1)
+
+console.log(prodotto)
