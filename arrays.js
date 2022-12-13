@@ -144,3 +144,17 @@ console.log("FINDINDEX -----------------------------------")
 const indice = prodotti.findIndex(elemento => elemento.prezzo === 5)
 
 console.log(indice) // Mi torna un numero perché sebbene l'array di partenza sia un array di oggetti, findIndex torna l'indice
+
+const persone = [
+  { nome: "Riccardo", cognome: "Gulin", età: 18, professione: "Dev" },
+  { nome: "Stefano", cognome: "Gulin", età: 25, professione: "Operaio" },
+]
+/* persone.forEach(persona => {
+      if(persona.età > 18) inviaEmail(persona.email)
+  }) */
+
+/* persone
+    .filter(persona => persona.età >= 18)
+    .forEach(personaMaggiorenne => inviaEmail(personaMaggiorenne.email))
+  
+  const [{ nome, cognome }, { età, professione }] = persone */
